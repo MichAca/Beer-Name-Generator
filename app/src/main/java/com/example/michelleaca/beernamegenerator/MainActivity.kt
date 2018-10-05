@@ -13,10 +13,33 @@ class MainActivity : AppCompatActivity() {
 
         generate_button.setOnClickListener {
 
+            // greetings
+
+            var birthMonth = birthMonth_editText.text.toString()
+            Log.d("Input", "Birthday Month is $birthMonth")
+
+            var greetings = when (birthMonth) {
+
+                "January" -> ("Hey!")
+                "February" -> ("Cheers!")
+                "March" -> ("Hi!")
+                "April" -> ("Howdy!")
+                "May" -> ("Wazzup?")
+                "June" -> ("Welcome!")
+                "July" -> ("Hi-ya")
+                "August" -> ("Bonjour!")
+                "September" -> ("Hey!")
+                "October" -> ("Hi!")
+                "November" -> ("Howdy!")
+                "December" -> ("Wazzup?")
+
+                else -> ("Invalid entry")
+            }
+
 
             // first name from birth month
 
-            var birthMonth = birthMonth_editText.text.toString()
+
             Log.d("Input", "Birthday Month is $birthMonth")
 
             var firstName = when (birthMonth) {
@@ -101,6 +124,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             Log.d("Input", "last name is $lastName")
+
+            greetings_textView.text = ("$greetings")
 
             var beerName = ("$firstName $middleName $lastName")
             beerName_textView.text = beerName

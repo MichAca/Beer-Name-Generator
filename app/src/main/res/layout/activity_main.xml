@@ -68,13 +68,24 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/greetings_textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="130dp"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#E59866"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/beerName_textView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="90dp"
         android:ems="10"
         android:gravity="center"
         android:textColor="#9b0000"
